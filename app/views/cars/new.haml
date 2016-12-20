@@ -1,0 +1,9 @@
+%h2 New Car
+
+= form_for @car do |f|
+  %p 
+    = f.text_field :name, placeholder: "write name"
+  %p 
+    = f.submit :submit
+  
+= link_to 'Back', cars_path

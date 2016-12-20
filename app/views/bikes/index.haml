@@ -1,0 +1,19 @@
+%h1 Bikes
+
+%table
+  %thead
+    %tr
+      %th ID
+      %th Name
+  %tbody
+    - @bikes.each do |bike|
+      %tr
+        %td 
+          = bike.id
+        %td 
+          = bike.name
+        %td 
+          = link_to 'Delete', bike, method: :delete
+
+%p 
+  = link_to 'Create new bike', new_bike_path

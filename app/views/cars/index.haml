@@ -1,0 +1,19 @@
+%h1 Cars
+
+%table
+  %thead
+    %tr
+      %th ID
+      %th Name
+  %tbody
+    - @cars.each do |car|
+      %tr
+        %td 
+          = car.id
+        %td 
+          = car.name
+        %td 
+          = link_to 'Delete', car, method: :delete
+
+%p 
+  = link_to 'Create new car', new_car_path
